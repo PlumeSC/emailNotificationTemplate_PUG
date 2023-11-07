@@ -30,7 +30,7 @@ html(lang='en')
       div Your order was successfully placed and your payment has been processed. Here is your order summary
       div.xxx
         div= date
-        div Order No: !{date}
+        div Order No: !{order}
       br
       div ITEMS ORDERED
       div 
@@ -41,19 +41,18 @@ html(lang='en')
           div= description
           div.price
             div day : 1
-            div= perday
+            div ฿ !{perday}
           br
           div.price
             div จำนวนการเช่า
-            div= time
+            div !{time} day
           div.price
             div ราคา
-            div= total
+            div ฿ !{perday*time}
           div.price
             div มัดจำ
-            div= disposit
+            div ฿ !{perday*time*0.3}
           br
           div.price
             div Total 
-            div= totalPrice
-            
+            div ฿ !{perday*time*1.3}

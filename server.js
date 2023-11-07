@@ -20,15 +20,12 @@ app.get(`/order`, async (req, res, next) => {
         res.render('./order', { 
             title: 'Thank you', 
             header: user.name,
-            // header: `Thank you for your order, ${user.name}`,
             date:user.date,
             orderNo:user.order,
             img:user.img,
             perday:user.price,
             time:user.time,
-            // total: `฿ ${user.price*user.time}`,
-            // disposit: `฿ ${user.price*user.time*0.3}`,
-            // totalPrice:`฿ ${user.price*user.time*1.3}`
+
         }, async (err, html) => {
             if (err) {
                 return next(err);
