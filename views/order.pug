@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head 
+    title= title
+    link(rel="stylesheet", href="/style/style.css")
+    style.
+      *{
+        box-sizing: border-box;
+        width:500px;
+      }
+      .img{
+        width:200px;
+      }
+      .xx {
+        background-color: blue;
+      }
+      .xxx{
+        display:flex;
+        flex-direction: row;
+        justify-content: between;
+      }
+      .price{
+        width:100%;
+        display:flex;
+        justify-content:between
+      }
+  body
+    div.x
+      h1 Thank you for your order, !{header}
+      div Your order was successfully placed and your payment has been processed. Here is your order summary
+      div.xxx
+        div= date
+        div Order No: !{date}
+      br
+      div ITEMS ORDERED
+      div 
+        div.img
+          img(src=img)
+        div 
+          div Product Name
+          div= description
+          div.price
+            div day : 1
+            div= perday
+          br
+          div.price
+            div จำนวนการเช่า
+            div= time
+          div.price
+            div ราคา
+            div= total
+          div.price
+            div มัดจำ
+            div= disposit
+          br
+          div.price
+            div Total 
+            div= totalPrice
+            
